@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WayFair - Blockchain Explorer</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="explorer-container">
+        <nav class="navbar">
+            <div class="logo">WayFair Explorer</div>
+            <a href="./dashboard.html" class="back-btn">← Back</a>
+        </nav>
+
+        <div class="explorer-content">
+            <h1>Blockchain Data Explorer</h1>
+            
+            <div class="explorer-tabs">
+                <button class="tab-btn active" data-tab="stats">Stats</button>
+                <button class="tab-btn" data-tab="rides">Rides</button>
+                <button class="tab-btn" data-tab="transactions">Transactions</button>
+                <button class="tab-btn" data-tab="bookings">Bookings</button>
+                <button class="tab-btn" data-tab="feedback">Feedback</button>
+                <button class="tab-btn" data-tab="sos">SOS Alerts</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Stats Tab -->
+                <div id="stats" class="tab-pane active">
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <h3>Total Transactions</h3>
+                            <p id="total-txns" class="stat-value">15,430</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Confirmed Blocks</h3>
+                            <p id="confirmed-blocks" class="stat-value">16,045,322</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Total Value</h3>
+                            <p id="total-value" class="stat-value">$385,750</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Network Status</h3>
+                            <p id="network-status" class="stat-value">Active ✓</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rides Tab -->
+                <div id="rides" class="tab-pane">
+                    <div class="explorer-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ride ID</th>
+                                    <th>Driver</th>
+                                    <th>Passenger</th>
+                                    <th>Route</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rides-tbody">
+                                <tr>
+                                    <td>RD1234567890</td>
+                                    <td>John Doe</td>
+                                    <td>Jane Smith</td>
+                                    <td>Downtown → Airport</td>
+                                    <td>$25.00</td>
+                                    <td><span class="status confirmed">Confirmed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Transactions Tab -->
+                <div id="transactions" class="tab-pane">
+                    <div class="explorer-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Transaction Hash</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Value</th>
+                                    <th>Gas Used</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="txns-tbody">
+                                <tr>
+                                    <td>0x123abc...</td>
+                                    <td>0xuser...</td>
+                                    <td>0xdriver...</td>
+                                    <td>25.00 ETHER</td>
+                                    <td>21,000</td>
+                                    <td><span class="status confirmed">Confirmed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Bookings Tab -->
+                <div id="bookings" class="tab-pane">
+                    <p>Total Bookings: 12,345</p>
+                    <p>Confirmed: 12,100</p>
+                    <p>Pending: 200</p>
+                    <p>Cancelled: 45</p>
+                </div>
+
+                <!-- Feedback Tab -->
+                <div id="feedback" class="tab-pane">
+                    <p>Average Rating: 4.8/5</p>
+                    <p>Total Reviews: 8,432</p>
+                    <p>5-Star: 6,200 (73%)</p>
+                    <p>4-Star: 1,800 (21%)</p>
+                    <p>Below 4-Star: 432 (6%)</p>
+                </div>
+
+                <!-- SOS Tab -->
+                <div id="sos" class="tab-pane">
+                    <p>Active SOS Alerts: 2</p>
+                    <p>This Week: 12</p>
+                    <p>Resolved: 10</p>
+                    <p>Response Time: avg 4.2 minutes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .explorer-container {
+            min-height: 100vh;
+            background-color: #f3f4f6;
+        }
+
+        .explorer-content {
+            padding: 2rem;
+        }
+
+        .explorer-tabs {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            border-bottom: 2px solid #e5e7eb;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            color: #6b7280;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: #1e3a8a;
+            border-bottom-color: #1e3a8a;
+        }
+
+        .tab-pane {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-top: 0.5rem;
+        }
+
+        .explorer-table {
+            background: white;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .explorer-table table {
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+
+    <script src="../scripts/blockchain.js"></script>
+    <script src="../scripts/analytics.js"></script>
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+                e.target.classList.add('active');
+                document.getElementById(e.target.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Load data
+        document.addEventListener('DOMContentLoaded', () => {
+            const stats = blockchainManager.getExplorerStats();
+            document.getElementById('total-txns').textContent = stats.totalTransactions.toLocaleString();
+            document.getElementById('confirmed-blocks').textContent = stats.confirmedTransactions.toLocaleString();
+            document.getElementById('total-value').textContent = '$' + stats.totalValue.toLocaleString();
+        });
+    </script>
+</body>
+</html>
