@@ -1,0 +1,33 @@
+{
+  "name": "wayfair",
+  "version": "1.0.0",
+  "description": "Blockchain-based ride-sharing platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "npm run lint && npm run test",
+    "test": "jest",
+    "lint": "eslint scripts/",
+    "deploy": "npm run build && git push heroku main",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": [
+    "ride-sharing",
+    "blockchain",
+    "ethereum",
+    "web3"
+  ],
+  "author": "WayFair Team",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0"
+  },
+  "dependencies": {
+    "web3": "^1.10.0",
+    "axios": "^1.4.0",
+    "lodash": "^4.17.21"
+  }
+}
