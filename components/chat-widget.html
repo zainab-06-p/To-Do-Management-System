@@ -1,0 +1,95 @@
+<!-- Chat Widget Component -->
+<div class="chat-widget">
+    <div class="chat-header">
+        <h4>Chat with Driver</h4>
+        <button class="close-chat">&times;</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+        <div class="message driver-message">
+            <p>Hi! I'm 5 minutes away</p>
+            <small>10:45 AM</small>
+        </div>
+        <div class="message user-message">
+            <p>Great, thanks!</p>
+            <small>10:46 AM</small>
+        </div>
+    </div>
+    <div class="chat-input">
+        <input type="text" placeholder="Type your message..." id="message-input">
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+
+<style>
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    max-width: 90%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.chat-header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.driver-message {
+    background-color: #e5e7eb;
+    margin-right: 2rem;
+}
+
+.user-message {
+    background-color: #1e3a8a;
+    color: white;
+    margin-left: 2rem;
+    text-align: right;
+}
+
+.chat-input {
+    display: flex;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.chat-input button {
+    padding: 0.5rem 1rem;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+</style>

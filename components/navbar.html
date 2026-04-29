@@ -1,0 +1,63 @@
+<!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="logo">WayFair</div>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../pages/dashboard.html">Dashboard</a></li>
+        <li><a href="../pages/profile.html">Profile</a></li>
+        <li><a href="../pages/referral.html">Referral</a></li>
+        <li><a href="./chat-widget.html">Chat</a></li>
+        <li><a href="../index.html" class="logout-btn">Logout</a></li>
+    </ul>
+</nav>
+
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1e3a8a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.logout-btn {
+    background-color: #dc2626;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+}
+</style>
