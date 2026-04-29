@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WayFair - Search Rides</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="search-container">
+        <nav class="navbar">
+            <div class="logo">WayFair</div>
+            <a href="./dashboard.html" class="back-btn">← Back</a>
+        </nav>
+
+        <div class="search-form">
+            <h2>Find Your Ride</h2>
+            <form>
+                <input type="text" placeholder="From" required>
+                <input type="text" placeholder="To" required>
+                <input type="date" required>
+                <input type="time" required>
+                <select>
+                    <option value="">Passengers</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3+</option>
+                </select>
+                <button type="submit" class="btn-primary">Search Rides</button>
+            </form>
+        </div>
+
+        <div class="ride-results" id="ride-results">
+            <div class="ride-card">
+                <div class="driver-info">
+                    <h4>Driver Name</h4>
+                    <p>★ 4.8 (250 ratings)</p>
+                </div>
+                <div class="ride-details">
+                    <p>Departure: 10:00 AM</p>
+                    <p>Price: $25</p>
+                </div>
+                <button class="btn-primary">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/rides.js"></script>
+</body>
+</html>

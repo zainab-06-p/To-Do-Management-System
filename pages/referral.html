@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WayFair - Referral</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="referral-container">
+        <nav class="navbar">
+            <div class="logo">WayFair</div>
+            <a href="./dashboard.html" class="back-btn">← Back</a>
+        </nav>
+
+        <div class="referral-content">
+            <h2>Earn with WayFair Referral Program</h2>
+            <div class="referral-card">
+                <h3>Your Referral Code</h3>
+                <div class="code-display">
+                    <input type="text" id="referral-code" value="WAYFAIR2026" readonly>
+                    <button class="btn-copy">Copy</button>
+                </div>
+            </div>
+
+            <div class="referral-rewards">
+                <h3>Rewards</h3>
+                <ul>
+                    <li>$10 credit for each friend who signs up</li>
+                    <li>Bonus rewards when your friends complete 5 rides</li>
+                    <li>Extra earnings for driver referrals</li>
+                </ul>
+            </div>
+
+            <div class="referral-stats">
+                <h3>Your Stats</h3>
+                <p>Total Referrals: <strong id="referral-count">0</strong></p>
+                <p>Total Earnings: <strong id="referral-earnings">$0</strong></p>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>

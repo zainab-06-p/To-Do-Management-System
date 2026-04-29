@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WayFair - Profile</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <nav class="navbar">
+            <div class="logo">WayFair</div>
+            <a href="./dashboard.html" class="back-btn">← Back</a>
+        </nav>
+
+        <div class="profile-content">
+            <div class="profile-header">
+                <img src="../assets/icons/user.png" alt="Profile">
+                <h2 id="user-name">User Name</h2>
+                <p id="user-role">Passenger</p>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-group">
+                    <label>Email:</label>
+                    <p id="user-email">user@wayfair.com</p>
+                </div>
+                <div class="detail-group">
+                    <label>Phone:</label>
+                    <p id="user-phone">+1234567890</p>
+                </div>
+                <div class="detail-group">
+                    <label>Joined:</label>
+                    <p id="join-date">January 2026</p>
+                </div>
+                <div class="detail-group">
+                    <label>Wallet Address:</label>
+                    <p id="wallet-address">0x...</p>
+                </div>
+            </div>
+
+            <button class="btn-primary">Edit Profile</button>
+            <button class="btn-secondary">Change Password</button>
+        </div>
+    </div>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>

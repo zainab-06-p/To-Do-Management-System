@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WayFair - Admin Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="navbar">
+            <div class="logo">WayFair Admin</div>
+            <ul class="nav-links">
+                <li><a href="./admin.html">Dashboard</a></li>
+                <li><a href="../index.html" class="logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="admin-content">
+            <h1>Admin Dashboard</h1>
+            
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p class="stat-value">1,245</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Rides</h3>
+                    <p class="stat-value">87</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Verification</h3>
+                    <p class="stat-value">23</p>
+                </div>
+                <div class="stat-card">
+                    <h3>SOS Alerts</h3>
+                    <p class="stat-value">2</p>
+                </div>
+            </div>
+
+            <div class="admin-users">
+                <h2>User Management</h2>
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-tbody">
+                        <tr>
+                            <td>USR001</td>
+                            <td>John Doe</td>
+                            <td>Driver</td>
+                            <td>Verified</td>
+                            <td>
+                                <button class="btn-view">View</button>
+                                <button class="btn-block">Block</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>

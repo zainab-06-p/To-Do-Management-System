@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WayFair - Live Tracking</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="live-tracking-container">
+        <nav class="navbar">
+            <div class="logo">WayFair</div>
+            <a href="./dashboard.html" class="back-btn">← Back</a>
+        </nav>
+
+        <div class="tracking-content">
+            <div id="map" class="map">
+                <!-- Map placeholder -->
+                <p>Live Map Integration</p>
+            </div>
+
+            <div class="tracking-details">
+                <div class="driver-card">
+                    <h3>Driver: John Doe</h3>
+                    <p>Vehicle: Honda Civic (Blue)</p>
+                    <p>License: ABC123</p>
+                    <p>ETA: 5 minutes</p>
+                </div>
+
+                <div class="tracking-actions">
+                    <button class="btn-primary" id="chat-btn">Chat with Driver</button>
+                    <button class="btn-secondary" id="sos-btn">SOS</button>
+                </div>
+
+                <div class="ride-status">
+                    <p id="status">Status: On the way</p>
+                    <div class="progress-bar">
+                        <div id="progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>

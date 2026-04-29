@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WayFair - My Bookings</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="bookings-container">
+        <nav class="navbar">
+            <div class="logo">WayFair</div>
+            <a href="./dashboard.html" class="back-btn">← Back</a>
+        </nav>
+
+        <div class="bookings-content">
+            <h2>My Bookings</h2>
+            
+            <div class="booking-tabs">
+                <button class="tab-btn active" data-filter="active">Active</button>
+                <button class="tab-btn" data-filter="completed">Completed</button>
+                <button class="tab-btn" data-filter="cancelled">Cancelled</button>
+            </div>
+
+            <div class="bookings-list" id="bookings-list">
+                <div class="booking-card">
+                    <div class="booking-header">
+                        <h4>Ride to Downtown</h4>
+                        <p class="status active">Active</p>
+                    </div>
+                    <p>Driver: Jane Smith</p>
+                    <p>Route: 123 Main St → 456 Park Ave</p>
+                    <p>Price: $25</p>
+                    <div class="booking-actions">
+                        <button class="btn-primary">Track Live</button>
+                        <button class="btn-secondary">Chat</button>
+                        <button class="btn-secondary">Pay Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>
