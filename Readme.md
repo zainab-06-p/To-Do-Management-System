@@ -10,7 +10,7 @@
 
 ---
 
-## � Project Resources
+## Project Resources
 
 Quick access to essential project tools and documentation:
 
@@ -22,7 +22,7 @@ Quick access to essential project tools and documentation:
 
 ---
 
-## �📋 Table of Contents
+## 📋 Table of Contents
 
 1. [Overview](#overview)
 2. [Features](#features)
