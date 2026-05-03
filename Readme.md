@@ -10,7 +10,19 @@
 
 ---
 
-## 📋 Table of Contents
+## � Project Resources
+
+Quick access to essential project tools and documentation:
+
+| Resource | Link |
+|----------|------|
+| **Design System** | [Figma Prototype](https://www.figma.com/proto/iPN4Qn27pBEuvm6OTcAjLd/Untitled?node-id=0-1&t=Mwt7YocAUlSkRew0-1) |
+| **Repository** | [GitHub - WayFair SPM](https://github.com/zainab-06-p/WayFair-SPM.git) |
+| **Project Management** | [Jira Dashboard](https://zainab-pirjade.atlassian.net/jira/software/projects/WF/summary?atlOrigin=eyJpIjoiNjMxZmI1MjU3NWY5NDliZmI4YTYzODMzYTlhNjlhNjUiLCJwIjoiaiJ9) |
+
+---
+
+## �📋 Table of Contents
 
 1. [Overview](#overview)
 2. [Features](#features)
